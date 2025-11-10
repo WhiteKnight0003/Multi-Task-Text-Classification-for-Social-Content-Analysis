@@ -2,7 +2,7 @@
 
 A deep learning system that simultaneously classifies social media content across three critical dimensions: emotion detection, violence type identification, and hate speech recognition using multi-task learning architecture.
 
-## 📋 Table of Contents
+**📋 Table of Contents**
 - [Overview](#overview)
 - [Features](#features)
 - [Architecture](#architecture)
