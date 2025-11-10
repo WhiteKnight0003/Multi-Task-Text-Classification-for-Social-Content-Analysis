@@ -3,15 +3,15 @@
 A deep learning system that simultaneously classifies social media content across three critical dimensions: emotion detection, violence type identification, and hate speech recognition using multi-task learning architecture.
 
 ## 📋 Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model Performance](#model-performance)
-- [Project Structure](#project-structure)
-- [Results](#results)
+- [Overview](##overview)
+- [Features](##features)
+- [Architecture](##architecture)
+- [Dataset](##dataset)
+- [Installation](##installation)
+- [Usage](##usage)
+- [Model Performance](##model-performance)
+- [Project Structure](##project-structure)
+- [Results](##results)
 
 ## 🎯 Overview
 
@@ -148,6 +148,14 @@ results = classifier.classify(text)
 print(f"Emotion: {results['Emotion']}")
 print(f"Violence: {results['Violence']}")
 print(f"Hate: {results['Hate']}")
+
+
+text = "He grabbed me and punched me in the face."
+results = classifier.classify(text)
+
+print(f"Emotion: {results['Emotion']}")
+print(f"Violence: {results['Violence']}")
+print(f"Hate: {results['Hate']}")
 ```
 
 ### Example Output:
@@ -164,7 +172,7 @@ Hate:     neither (Conf: 0.88)
 ### Confusion Matrices
 
 #### 1. Emotion Classification
-![Confusion Matrix for Emotion](confusion_matrix_emotion.png)
+![Confusion Matrix for Emotion](./confusion_matrix/Confusion_Matrix_for_Emotion.png)
 
 **Performance by Class:**
 - **Sadness**: 84% accuracy
@@ -176,16 +184,10 @@ Hate:     neither (Conf: 0.88)
 
 **Overall Accuracy: ~85%**
 
-**Key Observations:**
-- Surprise detection is highly accurate (98%)
-- Love shows strong performance (91%)
-- Some confusion between joy and love (11%)
-- Fear occasionally misclassified as surprise (7.7%)
-
 ---
 
 #### 2. Violence Type Detection
-![Confusion Matrix for Violence](confusion_matrix_violence.png)
+![Confusion Matrix for Violence](./confusion_matrix/Confusion_Matrix_for_Violence.png)
 
 **Performance by Class:**
 - **Sexual Violence**: 99% accuracy
@@ -196,16 +198,9 @@ Hate:     neither (Conf: 0.88)
 
 **Overall Accuracy: ~97.4%**
 
-**Key Observations:**
-- Near-perfect classification across all violence types
-- Physical violence detection is flawless
-- Minimal cross-class confusion (< 5%)
-- Robust identification of subtle violence categories
-
----
 
 #### 3. Hate Speech Detection
-![Confusion Matrix for Hate](confusion_matrix_hate.png)
+![Confusion Matrix for Hate](./confusion_matrix/Confusion_Matrix_for_Hate.png)
 
 **Performance by Class:**
 - **Hate Speech**: 50% accuracy
@@ -213,12 +208,6 @@ Hate:     neither (Conf: 0.88)
 - **Neither**: 86% accuracy
 
 **Overall Accuracy: ~75%**
-
-**Key Observations:**
-- Offensive language well-detected (89%)
-- Hate speech challenging to distinguish (50% accuracy)
-- 38% of hate speech misclassified as offensive language
-- "Neither" category performs well (86%)
 
 **Challenge:** The model struggles with distinguishing hate speech from offensive language, likely due to subtle linguistic differences and potential label ambiguity in the dataset.
 
