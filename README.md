@@ -3,15 +3,15 @@
 A deep learning system that simultaneously classifies social media content across three critical dimensions: emotion detection, violence type identification, and hate speech recognition using multi-task learning architecture.
 
 ## 📋 Table of Contents
-- [Overview](##overview)
-- [Features](##features)
-- [Architecture](##architecture)
-- [Dataset](##dataset)
-- [Installation](##installation)
-- [Usage](##usage)
-- [Model Performance](##model-performance)
-- [Project Structure](##project-structure)
-- [Results](##results)
+- [Overview](#overview)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Dataset](#dataset)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Performance](#model-performance)
+- [Project Structure](#project-structure)
+- [Results](#results)
 
 ## 🎯 Overview
 
@@ -160,11 +160,19 @@ print(f"Hate: {results['Hate']}")
 
 ### Example Output:
 ```
-Input: 'I am so happy, this is the best day of my life!'
+Input : 'I am so happy, this is the best day of my life!'
 --- Predictions ---
 Emotion:  joy (Conf: 0.94)
 Violence: emotional_violence (Conf: 0.67)
 Hate:     neither (Conf: 0.88)
+
+
+
+Input: 'He grabbed me and punched me in the face.'
+--- Predictions ---
+Emotion:  anger (Conf: 0.94)
+Violence: physical_violence (Conf: 0.94)
+Hate:      offensive_language (Conf: 0.88)
 ```
 
 ## 📈 Model Performance
